@@ -3,8 +3,15 @@ import React from 'react'
 
 const MarketTrends = () => {
   return (
-    <View>
-      <Text>MarketTrends</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text className="font-bold text-lg my-10 ">Market-Trend</Text>
+      
     </View>
   )
 }
