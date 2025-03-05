@@ -10,13 +10,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="font-bold text-lg my-10">AgroSense AI</Text>
-      <Link href='/sign-in'>SignIn</Link>
-      <Link href='/crop-monitoring'>CropMonitoring</Link>
-      <Link href='/market-trends'>MarketTrends</Link>
-      <Link href='/resource-optimization'>ResourceOptimization</Link>
-      <Link href='/weather-forecast'>WeatherForecast</Link>
-      <Link href='/settings'>Settings</Link>
+      <Text className="font-bold text-lg my-10 ">AgroSense AI</Text>
+      
     </View>
   );
 }
