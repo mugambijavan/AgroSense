@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, ImageSou
 import React from 'react';
 import icons from '@/constants/icons';
 import { useGlobalContext } from '@/lib/global-provider';
-import { logout } from '@/lib/appwrite';
+import { logout, getCurrentUser } from '@/lib/appwrite';
 
 type SettingsItemProps = {
     icon: ImageSourcePropType,
@@ -136,6 +136,7 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         borderColor: 'green',
         borderTopWidth: 1,
+        flex: 1,
     },
     settingsItem: {
         flexDirection: 'row',

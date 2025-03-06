@@ -1,20 +1,19 @@
-import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite'
-import * as Linking from 'expo-linking'
-import { openAuthSessionAsync } from 'expo-web-browser'
+import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite';
+import * as Linking from 'expo-linking';
+import { openAuthSessionAsync } from 'expo-web-browser';
 
 export const config = {
     platform: 'com.agro.agrosense',
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
     project: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
-}
+};
 
 export const client = new Client();
 
 client
     .setEndpoint(config.endpoint!)
     .setProject(config.project!)
-    .setPlatform(config.platform!)
-    
+    .setPlatform(config.platform!);
 
 export const avatar = new Avatars(client);
 export const account = new Account(client);
