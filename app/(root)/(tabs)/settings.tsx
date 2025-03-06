@@ -56,12 +56,6 @@ const Settings = () => {
                             source={{ uri: user?.avatar || 'https://via.placeholder.com/150' }} // Placeholder image
                             style={styles.avatar}
                         />
-                        <TouchableOpacity style={styles.editButton}>
-                            <Image 
-                                source={icons.edit}
-                                style={styles.editIcon}
-                            />
-                        </TouchableOpacity>
                         <Text style={styles.userName}>
                             {user?.name}
                         </Text>
