@@ -174,10 +174,10 @@ This project is licensed under the [MIT License](LICENSE).
 For any questions or feedback, please reach out:
 - **Project Maintainer**: [Mugambi Javan](mailto:mugambijavan@gmail.com)
 - **GitHub**: [mugambijavan](https://github.com/mugambijavan)
-
+   <br>
 - **Project Maintainer**: [Preston Osoro ](mailto:prestonosoro56@gmail.com)
 - **GitHub**: [preston-56](https://github.com/preston-56)
-
+   <br>
 - **Project Maintainer**: [Joseph Oluoch ](mailto:ochiengolu@gmail.com)
 - **GitHub**: [AmazyJoe](https://github.com/AmazyJoe)
 
