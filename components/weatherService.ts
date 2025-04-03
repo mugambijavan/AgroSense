@@ -1,9 +1,8 @@
     // components/weatherService.ts
     import axios from 'axios';
-    import * as dotenv from 'dotenv';
-    dotenv.config({ path: '.env.local' });
+    import Config from 'react-native-config';
 
-    const { WEATHER_API_KEY, WEATHER_BASE_URL } = process.env;
+    const { WEATHER_API_KEY, WEATHER_BASE_URL } = Config;
 
     export const fetchWeatherData = async (location: string) => {
     try {
