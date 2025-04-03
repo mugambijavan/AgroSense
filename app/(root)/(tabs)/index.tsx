@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, ScrollView, SafeAreaView } from "react-na
 import React, { useEffect, useState } from "react";
 import { Card, Title } from "react-native-paper";
 import { useRouter } from "expo-router";
+import { fetchWeatherData } from "@/components/weatherService"; // Import the weather service
 
 const Index = () => {
   const router = useRouter();
@@ -11,7 +12,20 @@ const Index = () => {
     // Fetch overview data
     fetch("your-overview-api-endpoint")
       .then((response) => response.json())
-      .then((data) => setOverview(data));
+      .then((data) => setOverview(data))
+      .catch((error) => console.error('Error fetching overview data:', error));
+
+    // Fetch weather data
+    fetchWeatherData("your_location") // Replace "your_location" with the desired location
+      .then((data) => {
+        setOverview((prevOverview) => ({
+          ...prevOverview,
+          weather: `Temperature: ${data.list[0].main.temp}°C, ${data.list[0].weather[0].description}`,
+        }));
+      })
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+      });
   }, []);
 
   return (

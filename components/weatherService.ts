@@ -1,4 +1,3 @@
-    // components/weatherService.ts
     import axios from 'axios';
     import Config from 'react-native-config';
 
@@ -15,6 +14,12 @@
         });
         return response.data;
     } catch (error) {
+        if (axios.isAxiosError(error)) {
+        console.error('Axios error message:', error.message);
+        console.error('Axios error config:', error.config);
+        } else {
+        console.error('Unexpected error:', error);
+        }
         throw error;
     }
     };
